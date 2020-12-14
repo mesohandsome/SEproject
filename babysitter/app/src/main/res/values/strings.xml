@@ -4,4 +4,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login_next">下一頁</string>
     <string name="profile_back">返回</string>
+    <string name="signup">註冊</string>
+    <string name="logo">Logo</string>
+    <string name="password">password</string>
+    <string name="login">登入</string>
+    <string name="username_email">username/email</string>
+    <string name="register">註冊</string>
+    <string name="fogetPasswd">忘記密碼</string>
+    <string name="noAccount">還沒有帳號?</string>
 </resources>

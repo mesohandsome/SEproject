@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main0);
         navController = Navigation.findNavController(findViewById(R.id.fragment));
         NavigationUI.setupActionBarWithNavController(this, navController);
     }

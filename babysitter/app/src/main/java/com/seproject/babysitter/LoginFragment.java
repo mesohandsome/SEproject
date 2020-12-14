@@ -12,11 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LoginFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class LoginFragment extends Fragment {
 
     public LoginFragment() {
@@ -38,10 +33,18 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button buttonNext = requireActivity().findViewById(R.id.buttonNext);
-        buttonNext.setOnClickListener(v -> {
+        Button buttonIn = requireActivity().findViewById(R.id.buttonIn);
+        Button buttonSign = requireActivity().findViewById(R.id.buttonSign);
+
+        // action of button
+        buttonIn.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_loginFragment_to_profileFragment);
         });
+        buttonSign.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_loginFragment_to_signupFragment);
+        });
     }
+
 }
