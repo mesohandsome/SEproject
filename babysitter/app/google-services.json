@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "296301086678",
+    "project_id": "seproject-c3521",
+    "storage_bucket": "seproject-c3521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296301086678:android:1526d356ddfde96d460677",
+        "android_client_info": {
+          "package_name": "com.seproject.babysitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296301086678-q9tsbh0lc4i3dno5aocd4ai6nm1n89u5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seproject.babysitter",
+            "certificate_hash": "6b5b30e576a52430bc77f28985e88a0919de5373"
+          }
+        },
+        {
+          "client_id": "296301086678-2rebb5smqp9sk5skmog7i4pho5381bis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChYZuzArGo-UsfRSaK4nRSaI6LpG5njzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296301086678-2rebb5smqp9sk5skmog7i4pho5381bis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

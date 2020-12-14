@@ -88,7 +88,7 @@
         android:layout_width="165dp"
         android:layout_height="165dp"
         android:layout_gravity="center_horizontal"
-        android:background="@color/fail"
+        android:background="@color/background"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
