@@ -1,16 +1,22 @@
 package com.seproject.babysitter;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link LoginFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class LoginFragment extends Fragment {
 
     public LoginFragment() {
@@ -32,26 +38,10 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button buttonIn = requireActivity().findViewById(R.id.buttonIn);
-        Button buttonSign = requireActivity().findViewById(R.id.buttonSign);
-        Button buttonforget = requireActivity().findViewById(R.id.buttonforget);
-
-        // action of button
-        buttonIn.setOnClickListener(v -> {
+        Button buttonNext = requireActivity().findViewById(R.id.buttonNext);
+        buttonNext.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_loginFragment_to_profileFragment);
         });
-        /*
-        buttonSign.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_loginFragment_to_signupFragment);
-        });
-        buttonforget.setOnClickListener(v->{
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_loginFragment_to_forgetPasswdFragment2);
-        });
-         */
     }
-
-
 }

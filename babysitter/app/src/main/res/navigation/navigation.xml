@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_register"
+            app:destination="@id/register" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -23,4 +26,38 @@
             android:id="@+id/action_profileFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/serch"
+        android:name="com.seproject.babysitter.serch"
+        android:label="fragment_serch"
+        tools:layout="@layout/fragment_serch" >
+        <action
+            android:id="@+id/action_serch_to_search"
+            app:destination="@id/search" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.seproject.babysitter.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/account"
+        android:name="com.seproject.babysitter.account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/comment"
+        android:name="com.seproject.babysitter.comment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.seproject.babysitter.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/needs"
+        android:name="com.seproject.babysitter.needs"
+        android:label="fragment_needs"
+        tools:layout="@layout/fragment_needs" />
 </navigation>
