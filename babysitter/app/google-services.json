@@ -1,20 +1,21 @@
 {
   "project_info": {
-    "project_number": "296301086678",
-    "project_id": "seproject-c3521",
-    "storage_bucket": "seproject-c3521.appspot.com"
+    "project_number": "594491275154",
+    "firebase_url": "https://babysitter-e760d-default-rtdb.firebaseio.com",
+    "project_id": "babysitter-e760d",
+    "storage_bucket": "babysitter-e760d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:296301086678:android:1526d356ddfde96d460677",
+        "mobilesdk_app_id": "1:594491275154:android:edd143dd93bdb3d385b34b",
         "android_client_info": {
           "package_name": "com.seproject.babysitter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "296301086678-q9tsbh0lc4i3dno5aocd4ai6nm1n89u5.apps.googleusercontent.com",
+          "client_id": "594491275154-fvpvfh8v8hinrmbp9mgg06eter57nakf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.seproject.babysitter",
@@ -22,20 +23,20 @@
           }
         },
         {
-          "client_id": "296301086678-2rebb5smqp9sk5skmog7i4pho5381bis.apps.googleusercontent.com",
+          "client_id": "594491275154-nitjq7cedqfjv56ogaj9qckvkn3j9r0v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyChYZuzArGo-UsfRSaK4nRSaI6LpG5njzc"
+          "current_key": "AIzaSyA1OeG1DCwVQ-yCdd12wukkDJ8JP_0simg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "296301086678-2rebb5smqp9sk5skmog7i4pho5381bis.apps.googleusercontent.com",
+              "client_id": "594491275154-nitjq7cedqfjv56ogaj9qckvkn3j9r0v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

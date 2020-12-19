@@ -38,8 +38,8 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button buttonNext = requireActivity().findViewById(R.id.buttonNext);
-        buttonNext.setOnClickListener(v -> {
+        Button buttonlogin = requireActivity().findViewById(R.id.btn_login);
+        buttonlogin.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_loginFragment_to_profileFragment);
         });
