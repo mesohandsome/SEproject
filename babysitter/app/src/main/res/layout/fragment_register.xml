@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarStyle="insideOverlay"
@@ -8,8 +9,7 @@
     android:scrollbars="vertical"
     android:background="@color/background">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -320,6 +320,14 @@
             android:backgroundTint="@color/title"
             android:textColor="@color/white"
             android:text="@string/title_register" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_register"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:visibility="invisible"/>
 
 
     </LinearLayout>

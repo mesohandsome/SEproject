@@ -10,12 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.SignInMethodQueryResult;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,6 +40,7 @@ public class register extends Fragment {
     private EditText userEmailET, userPwdET;
     private FirebaseAuth objectFirebaseAuth;
     private Button objectButton;
+    private ProgressBar objectProgressBar;
 
     public register() {
         // Required empty public constructor
@@ -47,11 +52,17 @@ public class register extends Fragment {
         {
             if(!userEmailET.getText().toString().isEmpty() && !userPwdET.getText().toString().isEmpty())
             {
+                objectProgressBar.setVisibility(View.VISIBLE);
+                objectButton.setEnabled(false);
                 objectFirebaseAuth.createUserWithEmailAndPassword(userEmailET.getText().toString(), userPwdET.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(getContext(), "帳戶建立成功!", Toast.LENGTH_SHORT).show();
+                                objectProgressBar.setVisibility(View.INVISIBLE);
+                                objectButton.setEnabled(true);
+                                userEmailET.setText("");
+                                userPwdET.setText("");
                                 if(objectFirebaseAuth.getCurrentUser() != null)
                                 {
                                     objectFirebaseAuth.signOut();
@@ -61,7 +72,10 @@ public class register extends Fragment {
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
+                                objectProgressBar.setVisibility(View.INVISIBLE);
+                                objectButton.setEnabled(true);
                                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+
                             }
                         });
             }
@@ -78,6 +92,48 @@ public class register extends Fragment {
 
     }
 
+    private void checkUserExists()
+    {
+        try
+        {
+            if(objectFirebaseAuth != null && !userEmailET.getText().toString().isEmpty())
+            {
+                objectProgressBar.setVisibility(View.VISIBLE);
+                objectButton.setEnabled(false);
+                objectFirebaseAuth.fetchSignInMethodsForEmail(userEmailET.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+                                boolean checkResult = !task.getResult().getSignInMethods().isEmpty();
+                                if(!checkResult)
+                                {
+                                    createUser();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getContext(), "此信箱已被註冊過!", Toast.LENGTH_SHORT).show();
+                                    objectProgressBar.setVisibility(View.INVISIBLE);
+                                    objectButton.setEnabled(true);
+                                }
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                objectProgressBar.setVisibility(View.INVISIBLE);
+                                objectButton.setEnabled(true);
+                                Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
     private void attachToXML()
     {
         try
@@ -88,12 +144,15 @@ public class register extends Fragment {
             objectFirebaseAuth = FirebaseAuth.getInstance();
             objectButton = objectRegisterFragment.findViewById(R.id.btn_register);
 
+            objectProgressBar = objectRegisterFragment.findViewById(R.id.progressbar_register);
             objectButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    createUser();
+                    checkUserExists();
                 }
             });
+
+
 
         }
         catch (Exception e)
