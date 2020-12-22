@@ -3,7 +3,10 @@ package com.seproject.babysitter;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,7 +62,7 @@ public class register extends Fragment {
                                 }
                             }
                         })
-                        .addOnFailureListener(new OnFailureListener() {
+                        .addOnFailureListener(new OnFailureistener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 objectProgressBar.setVisibility(View.INVISIBLE);
@@ -155,9 +158,6 @@ public class register extends Fragment {
     public static register newInstance(String param1, String param2) {
         register fragment = new register();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -173,5 +173,19 @@ public class register extends Fragment {
         objectRegisterFragment = inflater.inflate(R.layout.fragment_register, container, false);
         attachToXML();
         return objectRegisterFragment;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        /*
+        Button buttonreg = requireActivity().findViewById(R.id.btn_register);
+
+        buttonreg.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_register_to_loginFragment);
+        });
+
+         */
     }
 }

@@ -14,8 +14,11 @@
             android:id="@+id/action_loginFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_register"
-            app:destination="@id/register" />
+            android:id="@+id/action_loginFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_personalFragment"
+            app:destination="@id/personalFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -30,7 +33,11 @@
         android:id="@+id/register"
         android:name="com.seproject.babysitter.register"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.seproject.babysitter.search"
@@ -41,4 +48,30 @@
         android:name="com.seproject.babysitter.needs"
         android:label="fragment_needs"
         tools:layout="@layout/fragment_needs" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.seproject.babysitter.TermsFragment"
+        android:label="TermsFragment" >
+        <action
+            android:id="@+id/action_termsFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_termsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.seproject.babysitter.PrivacyFragment"
+        android:label="PrivacyFragment" >
+        <action
+            android:id="@+id/action_privacyFragment_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_privacyFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.seproject.babysitter.PersonalFragment"
+        android:label="PersonalFragment" />
 </navigation>

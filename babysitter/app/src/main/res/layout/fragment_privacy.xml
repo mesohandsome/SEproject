@@ -51,7 +51,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/cb_agree"
+                android:id="@+id/privacy_agree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我已閱讀並同意服務條款"
@@ -71,7 +71,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_pre"
+                android:id="@+id/privacy_pre"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginRight="20dp"
@@ -79,7 +79,7 @@
                 android:text="上一步" />
 
             <Button
-                android:id="@+id/btn_next"
+                android:id="@+id/privacy_next"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="20dp"

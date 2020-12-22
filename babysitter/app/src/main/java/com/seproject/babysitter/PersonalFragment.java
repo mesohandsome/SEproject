@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class PersonalFragment extends Fragment {
 
     public PersonalFragment() {
@@ -17,6 +19,8 @@ public class PersonalFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
     }
 
     @Override
