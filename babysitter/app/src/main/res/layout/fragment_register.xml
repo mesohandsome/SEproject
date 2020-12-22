@@ -8,320 +8,254 @@
     android:scrollbars="vertical"
     android:background="@color/background">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="40dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:contentDescription="Logo"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_logo_app" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:contentDescription="Logo"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_logo_name" />
+
+    <TextView
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="40dp">
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/title_register"
+        android:textColor="@color/title"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_menu_star" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_name"
+                android:inputType="text"
+                android:layout_marginStart="36dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_email"
+                android:inputType="textEmailAddress" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_password" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_password"
+                android:inputType="textPassword" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_check_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="165dp"
-            android:layout_height="165dp"
-            android:contentDescription="Logo"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_logo_app" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="200dp"
-            android:layout_height="64dp"
-            android:contentDescription="Logo"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_logo_name" />
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/title_register"
-            android:textColor="@color/title"
-            android:textSize="30sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_menu_star" />
-
-                <EditText
-                    android:id="@+id/et_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_name"
-                    android:inputType="text" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_phone" />
-
-                <EditText
-                    android:id="@+id/et_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_email"
-                    android:inputType="textEmailAddress" />
-
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:id="@+id/fl_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_password" />
-
-                <EditText
-                    android:id="@+id/et_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_password"
-                    android:inputType="textPassword" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/fl_check_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_password" />
-
-                <EditText
-                    android:id="@+id/et_check_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_check_password"
-                    android:inputType="textPassword" />
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:text="@string/title_personal_data"
-            android:textColor="@color/title"
-            android:textSize="24sp" />
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:text="@string/tip_personal_data"
-            android:textColor="@color/highlight"
-            android:textSize="14sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_menu_person" />
-
-                <EditText
-                    android:id="@+id/et_real_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_real_name"
-                    android:inputType="text" />
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_menu_issues" />
-
-                <EditText
-                    android:id="@+id/et_connect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_connect"
-                    android:inputType="text" />
-
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:tint="@color/title"
-                    app:srcCompat="@drawable/ic_menu_issues" />
-
-                <EditText
-                    android:id="@+id/et_place"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:hint="@string/hint_please_input_place"
-                    android:inputType="text" />
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginLeft="0dp"
-                android:textSize="16dp"
-                android:text="您是否已閱讀並同意"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <TextView
-                android:id="@+id/tv_user_protocol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="用戶協議"
-                android:textColor="@color/highlight" />
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textSize="16dp"
-                android:text="和"
-                android:textColor="@color/title" />
-
-            <TextView
-                android:id="@+id/tv_privacy_protocol"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textSize="16dp"
-                android:text="隱私政策"
-                android:textColor="@color/highlight" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_gravity="start|center_vertical"
+            android:tint="@color/title"
+            app:srcCompat="@drawable/ic_password" />
 
-            <Button
-                android:id="@+id/btn_yes"
-                android:layout_height="wrap_content"
-                android:layout_width="64dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:layout_marginTop="16dp"
-                android:text="@string/lab_yes" />
-
-            <Button
-                android:id="@+id/btn_no"
-                android:layout_height="wrap_content"
-                android:layout_width="64dp"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:layout_marginTop="16dp"
-                android:text="@string/lab_no" />
-
-        </LinearLayout>
-
-
-
-        <Button
-            android:id="@+id/btn_register"
+        <EditText
+            android:id="@+id/et_check_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="64dp"
-            android:backgroundTint="@color/title"
-            android:textColor="@color/white"
-            android:text="@string/title_register" />
-
+            android:layout_marginLeft="36dp"
+            android:hint="@string/hint_please_check_password"
+            android:inputType="textPassword"
+            android:layout_marginStart="36dp" />
+        </FrameLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/menu_data"
+        android:textColor="@color/title"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="@string/tip_personal_data"
+        android:textColor="@color/highlight"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_menu_person" />
+
+            <EditText
+                android:id="@+id/et_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_real_name"
+                android:inputType="text" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_menu_issues" />
+
+            <EditText
+                android:id="@+id/et_connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_connect"
+                android:inputType="text" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="@color/title"
+                app:srcCompat="@drawable/ic_menu_issues" />
+
+            <EditText
+                android:id="@+id/et_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:hint="@string/hint_please_input_place"
+                android:inputType="text" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/title"
+        android:textColor="@color/white"
+        android:text="@string/title_register" />
+
+
+</LinearLayout>
 
 </ScrollView>

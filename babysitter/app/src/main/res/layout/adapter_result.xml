@@ -191,29 +191,35 @@
             android:layout_marginTop="5dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:drawableLeft="@drawable/ic_menu_heart"
+                    android:textColor="@color/highlight"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/menu_store" />
 
                 <Button
-                    android:id="@+id/btn_chat"
+                    android:id="@+id/btn_save_need"
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:ellipsize="end"
-                    android:gravity="start|center_vertical"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/title"
                     android:text="@string/title_chat"
-                    android:textSize="10dp" />
+                    android:layout_marginEnd="20dp" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_read"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center_vertical|end"
-                tools:text="已聯絡人數 123" />
 
         </FrameLayout>
 

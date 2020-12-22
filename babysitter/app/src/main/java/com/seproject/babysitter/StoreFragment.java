@@ -8,14 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BaseSimpleListFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class BaseSimpleListFragment extends Fragment {
+public class StoreFragment extends Fragment {
 
-    public BaseSimpleListFragment() {
+    public StoreFragment() {
         // Required empty public constructor
     }
 
@@ -28,6 +23,6 @@ public class BaseSimpleListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_base_simple_list, container, false);
+        return inflater.inflate(R.layout.fragment_store, container, false);
     }
 }

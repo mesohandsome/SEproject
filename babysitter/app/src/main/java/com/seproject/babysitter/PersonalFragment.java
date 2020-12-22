@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class register extends Fragment {
+public class PersonalFragment extends Fragment {
 
-    public register() {
+    public PersonalFragment() {
         // Required empty public constructor
     }
 
@@ -23,6 +23,6 @@ public class register extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        return inflater.inflate(R.layout.fragment_personal, container, false);
     }
 }

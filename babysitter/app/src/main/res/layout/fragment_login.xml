@@ -4,25 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical"
-    android:paddingTop="40dp">
+    android:paddingTop="40dp"
+    android:background="@color/background">
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="165dp"
         android:layout_height="165dp"
+        android:contentDescription="Logo"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="@string/logo"
         app:srcCompat="@drawable/ic_logo_app" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="200dp"
         android:layout_height="64dp"
+        android:contentDescription="Logo"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="@string/logo"
         app:srcCompat="@drawable/ic_logo_name" />
-
+<!--
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:text="@string/title_login"
         android:textColor="@color/title"
         android:textSize="30sp" />
-
+-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,10 +55,9 @@
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
                 android:hint="@string/hint_please_input_email"
-                android:inputType="textEmailAddress"
-                android:autofillHints="" />
+                android:inputType="textEmailAddress" />
 
         </FrameLayout>
 
@@ -80,21 +79,20 @@
                 android:id="@+id/et_password"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
                 android:hint="@string/hint_please_input_password"
-                android:inputType="textPassword"
-                android:importantForAutofill="no" />
+                android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btn_forget_password"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_gravity="end"
-                android:backgroundTint="@color/background"
                 android:paddingStart="10dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="3dp"
+                android:backgroundTint="@color/background"
                 android:text="@string/lab_forget_password"
                 android:textColor="@color/title"
                 android:textSize="12sp" />
@@ -102,23 +100,22 @@
         </FrameLayout>
 
     </LinearLayout>
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
         android:backgroundTint="@color/title"
-        android:text="@string/title_login"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:text="@string/title_login" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:gravity="center"
+        android:layout_marginTop="48dp"
         android:text="@string/lab_no_account"
         android:textColor="@color/title"
         android:textSize="16sp" />
@@ -130,8 +127,9 @@
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
         android:backgroundTint="@color/title"
-        android:text="@string/title_register"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:text="@string/title_register" />
+
 
 
 </LinearLayout>

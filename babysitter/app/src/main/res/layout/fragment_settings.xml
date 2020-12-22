@@ -1,14 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    android:scrollbarStyle="insideOverlay"
+    android:padding="5dp"
+    android:scrollbars="vertical"
+    android:background="@color/background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/menu_setting"
+            android:textColor="@color/title"
+            android:textSize="30sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <Button
+                    android:id="@+id/btn_pic"
+                    android:layout_marginStart="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="更換頭像"
+                    android:backgroundTint="@color/title"
+                    android:layout_marginLeft="140dp" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="@string/title_change_password"
+                android:textColor="@color/title"
+                android:textSize="20sp" />
+
+                <FrameLayout
+                    android:id="@+id/fl_old_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <EditText
+                        android:id="@+id/et_old_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:hint="@string/hint_please_input_old_password"
+                        android:inputType="textPassword" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:hint="@string/hint_please_input_new_password"
+                        android:inputType="textPassword" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_check_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <EditText
+                        android:id="@+id/et_check_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:hint="@string/hint_please_check_password"
+                        android:inputType="textPassword" />
+                </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_save_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="64dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/lab_save" />
+
+                <Button
+                    android:id="@+id/btn_cancel_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="64dp"
+                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/lab_cancel" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="@string/menu_data"
+                android:textColor="@color/title"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/tip_personal_data"
+                android:textColor="@color/highlight"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_menu_person" />
+
+                <EditText
+                    android:id="@+id/et_real_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_real_name"
+                    android:inputType="text" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_menu_star" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_name"
+                    android:inputType="text" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_menu_issues" />
+
+                <EditText
+                    android:id="@+id/et_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_connect"
+                    android:inputType="text" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_menu_issues" />
+
+                <EditText
+                    android:id="@+id/et_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_place"
+                    android:inputType="text" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_save_data"
+                android:layout_height="wrap_content"
+                android:layout_width="64dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:text="@string/lab_save" />
+
+            <Button
+                android:id="@+id/btn_cancel_data"
+                android:layout_height="wrap_content"
+                android:layout_width="64dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:text="@string/lab_cancel" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

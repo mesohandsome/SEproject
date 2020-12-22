@@ -1,17 +1,4 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login_next">下一頁</string>
-    <string name="profile_back">返回</string>
-    <string name="signup">註冊</string>
-    <string name="logo">Logo</string>
-    <string name="password">password</string>
-    <string name="login">登入</string>
-    <string name="username_email">username/email</string>
-    <string name="register">註冊</string>
-    <string name="fogetPasswd">忘記密碼</string>
-    <string name="noAccount">還沒有帳號?</string>
-
     <string name="app_name">iCC 托育小幫手</string>
     <string name="app_browser_name">通用瀏覽器</string>
     <string name="app_slogan">iCC托育小幫手是一個臨時育兒支援服務的線上媒合平台，為所有因育兒壓力而疲憊的爸媽存在。我們建立專業審核機制，透過公開檔案與評價、一鍵案件發佈+應徵自動通知，讓爸媽即時找到所需的育兒救援。</string>
@@ -23,42 +10,82 @@
     <string name="menu_personal">個人</string>
     <string name="menu_need">需求</string>
 
-    <string name="menu_notifications">通知</string>
+    <string name="menu_new">最新</string>
     <string name="menu_issues">問題</string>
-    <string name="menu_starred">收藏</string>
+    <string name="menu_store">收藏</string>
     <string name="menu_settings">設定</string>
     <string name="menu_about">關於</string>
 
-    <string name="menu_account">帳號設定</string>
+    <string name="menu_setting">設定</string>
     <string name="menu_data">聯絡資料</string>
     <string name="menu_baby">我的寶寶</string>
     <string name="menu_babysitter">保母簡介</string>
     <string name="menu_notice">通知</string>
 
-    <string name="about_copyright">© %1$s xuexiangjys All rights reserved.</string>
-    <string name="about_item_homepage">官方網站</string>
-    <string name="about_item_author_github">關於作者</string>
-    <string name="about_item_donation_link">捐贈作者</string>
-    <string name="about_item_add_qq_group">QQ交流群</string>
-    <string name="url_project_github">https://github.com/xuexiangjys/TemplateAppProject</string>
-    <string name="url_author_github">https://github.com/xuexiangjys</string>
-    <string name="url_donation_link">https://gitee.com/xuexiangjys/Resource/blob/master/doc/sponsor.md</string>
-    <string name="url_add_qq_group">http://qm.qq.com/cgi-bin/qm/qr?k=tiP-E6rDf0y77PRNfp2lNVcc9RsglPCM</string>
-
     <string name="lab_yes">是</string>
     <string name="lab_no">否</string>
-    <string name="lab_open_third_app">是否允许页面打开第三方应用?</string>
 
     <!-- 隐私政策弹窗   -->
-    <string name="lab_exit_app">退出APP</string>
     <string name="lab_agree">同意</string>
     <string name="lab_disagree">不同意</string>
-    <string name="lab_look_again">再次查看</string>
-    <string name="lab_still_disagree">仍不同意</string>
-    <string name="title_reminder">温馨提示</string>
-    <string name="content_think_about_it_again">要不要再想想</string>
-    <string name="content_privacy_explain_again">我們非常重視對您個人信息的保護，承諾嚴格按照《%s隱私權政策》保護及處理你的信息。如果你不同意該政策，很遺憾我們將無法為你提供服務</string>
-    <string name="lab_privacy_name">《%s隱私權政策》</string>
+    <string name="title_privacy_name">《隱私權政策》</string>
+    <string name="title_term_name">《服務條款》</string>
+    <string name="title_term">感謝您使用我們的產品和服務 (以下簡稱「服務」)。當您使用本服務時，即表示您已閱讀、瞭解並同意接受本服務條款之所有內容，故請詳閱本條款內容。若您不同意，請立即停止使用服務，並刪除或停用所有您已下載之應用程式。<br />
+        若您是一個超過十八歲的自然人，或者如果您是在十八歲以下且擁有您的父母或監護人的合法許可，方得使用或繼續使用本服務。<br />
+<br />
+    使用「服務」<br />
+<br />
+    您必須遵守「服務」中向您提供的所有條款。<br />
+<br />
+請勿濫用「服務」。舉例來說，您不應干擾「服務」運作，亦不得試圖透過我們所提供的介面和操作說明以外的方法存取「服務」。您僅可於法律 (包括適用的出口及再出口管制法律和法規) 允許範圍內使用「服務」。如果您未遵守我們的條款或政策，或是如果我們正在調查疑似違規行為，我們可能會暫停或終止向您提供「服務」。<br />
+使用「服務」並不會將「服務」或您所存取內容的任何智慧財產權授予您。除非相關內容的擁有者同意或法律允許，否則您一律不得使用「服務」中的內容。本條款並未授權您可使用「服務」中所採用的任何品牌標示或標誌。請勿移除、遮蓋或變造「服務」所顯示或隨附顯示的任何法律聲明。<br />
+有關您對「服務」的使用，我們會向您發送服務公告、行政管理訊息和其他資訊；您可取消接收其中某些通訊內容。<br />
+「服務」可以在行動裝置上使用。但請勿在會分散注意力的情況下使用這些「服務」，以免違反交通或安全法規。<br />
+<br />
+您的iCC托育媒合帳號<br />
+<br />
+您需有「iCC托育媒合帳號」才能使用我們的「服務」。您可自行建立「iCC托育媒合帳號」。<br />
+為保護您的iCC托育媒合帳號，請務必保管好您的密碼並對外保密。您必須為自己iCC托育媒合帳號中的所有活動負責。如果您發現自己的iCC托育媒合帳號或密碼遭人盜用，請立即通知我們。<br />
+<br />
+您儲存在「服務」中的內容<br />
+<br />
+部分「服務」可讓您上傳、提交、儲存、傳送或接收內容；您仍保有相關內容中您擁有的智慧財產權。<br />
+您得以透過「服務」或其中包含的軟體之相關功能，與第三方交流與接觸。其內容亦可能由用戶在本網站或特定的服務項目下上傳或發佈。使用者內容包含：經由「服務」所發佈的內容或資訊，舉凡圖片、文字、紀錄、影片、相片、音檔、文件分享及其他相關資料。所有您公佈的資訊，皆視同非個人私有、非機密之性質。透過您的帳號所上傳、下載、發佈、由第三方通訊軟體傳送與接收、電子郵件寄送、雲端儲存或透過其它方式提供使用者相關資訊，均由您負擔完全責任。愛托付無法限制用戶使用「服務」或其中包含的軟體所儲存或張貼之內容。建議您審慎上傳或分享敏感的個人資訊。<br />
+<br />
+有關「服務」所含軟體<br />
+<br />
+如果「服務」需有或內含可下載軟體，該軟體可能會在提供新版或新功能時，在您的裝置上自動更新。<br />
+iCC托育媒合授予您全球通用、免權利金、不得轉讓、非專屬的個人使用授權，且無再授權的權利，並且僅於本協議的期限內有效。本授權僅供您以這些條款允許之方式，使用iCC托育媒合提供之「服務」並從其受惠。除非法律禁止下列限制，或除非您已取得我們的書面許可，否則您不得複製、修改、散佈、銷售或出租本軟體、刪除「服務」的任何通知或標記，或以逆向編譯、逆向工程或其他方式嘗試學習、使用或披露「服務」的任何部分或其中包含的軟體，或通過網路全部或部分轉讓本軟體，或允許任何第三方執行上述任何一項。<br />
+<br />
+修改與終止「服務」<br />
+<br />
+我們會持續不斷變更並改進「服務」。我們可能會新增或移除功能或特性，也可能會完全暫停或停止某項「服務」。<br />
+iCC托育媒合可能會不時變更本協議，您同意經常閱讀本協議以得知此類更改，且進一步理解並同意無論您是否確實收到此通知，您都將受到所有此類更改（如果存在）的約束。如果您要求收到此類更改的通知且提供一個有效的電子郵件地址，愛托付也會通過電子郵件通知您任何此類變更。<br />
+您隨時都可以停止使用「服務」。<br />
+<br />
+擔保與免責聲明<br />
+<br />
+我們會以商業上合理的技術與注意程度提供「服務」，但關於「服務」有些事情我們不予保證。<br />
+您瞭解「服務」並非絕不間斷，伺服器中斷連線或長時間停機皆可能發生。iCC托育媒合保留相關權利，並得隨時變更、更新、或移除部分「服務」，以及限制或封鎖「服務」其中任何功能。變更之內容可能會以系統通知或其他方式通知用戶。我們僅以「現狀」提供「服務」。<br />
+<br />
+個人行為規範和責任限制<br />
+<br />
+您理解並同意完美的安全性在任何地方都不存在，因此您將在任何時候以合理的方式保護您的個人資訊。同樣地，您不會將您的個人資訊透露或發佈給那些可以合理懷疑會不當使用或洩露個人資訊的人。您同意絕不洩漏用戶您個人帳號密碼至第三方，且願擔負相關法律責任。您個人將為使用「服務」產生之行為負責。如果您認為您使用之「服務」有遭到侵入、盜用之情事發生，或有其它觸犯安全性之情況，您同意透過電子信箱，聯繫本公司。<br />
+在任何情況下，不論何時、何地、以任何方式，愛托付皆不應為你或任何一方承擔任何間接、特殊、附帶、連帶或懲罰性的損害賠償責任。在任何情況下，iCC托育媒合根據本協議定義之下或與本軟體有關聯之所承擔的全部責任均不超過您為「服務」支付的費用總額。某些法律對於損害賠償有其自訂的規範，因此上述可能不適用於您。<br />
+您同意「服務」的使用所屬權為個人使用，而不得重新分發。您不得在本協議期限內或之後的任何時間使用、發佈、披露或以其他方式向任何人洩漏任何有關「服務」的非公開資訊（包括但不限於任何密碼）。<br />
+您必須自您首次提出索賠之日期起一年內，針對本協議之相關事宜向法院提出任何索賠，但若您的當地法律規定得於更長之時間內提出者，則不在此限。若未於一年內提出，則永不得再提。<br />
+<br />
+公司行號使用「服務」<br />
+<br />
+如果您是代表某公司使用「服務」，即表示該公司接受本條款。該公司必須就任何因使用「服務」或違反本條款而引起或相關的請求、訴訟或法律行動 (包括承擔所有因請求、損失、損害、訴訟、判決、訴訟費用和律師費用而產生的任何責任或費用)，向iCC托育媒合及其關係企業、主管人員、代理人和員工做出補償，並使其不受損害。<br />
+<br />
+有關本條款的說明<br />
+<br />
+本條款根據中華民國（台灣）法律解釋，而不考慮與其法律原則相衝突之處。基於本協議或本協議有關的任何交易而引起的任何爭議，均以台灣台北地方法院為第一審管轄法院。您進一步同意，您將不會以任何方式參與此類爭議相關的集體訴訟，無論是作為一位集體訴訟之原告代表，還是作為一位推定集體訴訟的成員。<br />
+iCC托育媒合有權於任何時間修改或變更本服務條款之內容，建議您隨時注意該等修改或變更。若您於任何修改或變更後繼續使用本服務，將視為您已閱讀、瞭解並同意接受該等修改或變更。如果您不同意本服務條款的內容，或者您所屬的國家或地域排除本服務條款內容之全部或一部份時，請您立即停止使用「服務」。<br />
+本條款規範愛托付與您之間的關係，並不會衍生任何第三人受益權。<br />
+如果您不遵守本條款，而我們並未立即採取行動，這並不表示我們要放棄任何原本即有的權利 (例如未來再採取行動的權利)。<br />
+發生特定條款無法執行的情況時，並不會影響任何其他條款。<br /></string>
 
     <!-- 登录   -->
     <string name="title_login_register">登入/註冊</string>
@@ -94,7 +121,6 @@
     <string name="regex_password">^(?:(?=.*[a-zA-Z])(?=.*[0-9])).{8,18}$</string>
 
     <!-- 基本資料   -->
-    <string name="title_personal_data">個人資料</string>
     <string name="title_name">暱稱</string>
     <string name="title_real_name">本名</string>
     <string name="hint_please_input_real_name">請輸入真實姓名</string>
@@ -117,8 +143,20 @@
 
     <!-- 評論   -->
     <string name="title_comment">評論</string>
-    <string name="title_chat">發送聯絡請求</string>
-    <string name="title_house">請求詳細地點</string>
+    <string name="title_chat">聯絡資訊</string>
+    <string name="title_house">查看地址</string>
+    <string name="title_my_baby">傳送我的寶寶簡介</string>
+    <string name="title_babysitter">傳送我的保母簡介</string>
     <string name="title_upload">上架</string>
+
+    <!-- 評論   -->
+    <string name="lab_new">最新</string>
+    <string name="lab_time">時段</string>
+    <string name="lab_place">地點</string>
+    <string name="lab_money">薪資</string>
+    <string name="lab_send">同意並發送</string>
+    <string name="lab_refuse">拒絕</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

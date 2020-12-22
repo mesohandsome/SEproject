@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    android:padding="5dp"
+    android:scrollbars="vertical">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:background="@color/background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/tv_title_name"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:ellipsize="end"
+                                            android:gravity="start|center_vertical"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:text="@string/title_name"
+                                            android:textSize="16dp"/>
+
+                                        <TextView
+                                            android:id="@+id/tv_name"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginLeft="48dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="16dp"
+                                            android:text="小明" />
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp" >
+
+                                        <TextView
+                                            android:id="@+id/tv_title_real_name"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:ellipsize="end"
+                                            android:gravity="start|center_vertical"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:text="@string/title_real_name"
+                                            android:textSize="16dp"/>
+
+                                        <TextView
+                                            android:id="@+id/tv_real_name"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginLeft="48dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="16dp"
+                                            android:text="王小明" />
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5dp">
+
+                                        <TextView
+                                            android:id="@+id/tv_title_email"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:ellipsize="end"
+                                            android:gravity="start|center_vertical"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:text="@string/title_email"
+                                            android:textSize="16dp"/>
+                                        <TextView
+                                            android:id="@+id/tv_email"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginLeft="48dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="16dp"
+                                            android:text="abcd1234@gmail.com" />
+
+                                </FrameLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+
+
+                <Button
+                    android:id="@+id/btn_data"
+                    android:layout_height="wrap_content"
+                    android:layout_width="81dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/title"
+                    android:textSize="11sp"
+                    android:drawableTop="@drawable/ic_menu_settings"
+                    android:text="@string/menu_setting" />
+
+                <Button
+                    android:id="@+id/btn_baby"
+                    android:layout_height="wrap_content"
+                    android:layout_width="81dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/title"
+                    android:textSize="11sp"
+                    android:drawableTop="@drawable/ic_menu_baby"
+                    android:text="@string/menu_baby" />
+
+                <Button
+                    android:id="@+id/btn_babysitter"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="81dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/title"
+                    android:textSize="11sp"
+                    android:drawableTop="@drawable/ic_menu_babysitter"
+                    android:text="@string/menu_babysitter" />
+
+                <Button
+                    android:id="@+id/btn_notice"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="81dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/title"
+                    android:textSize="11sp"
+                    android:drawableTop="@drawable/ic_menu_notifications"
+                    android:text="@string/menu_notice" />
+
+                <Button
+                    android:id="@+id/btn_settings"
+                    android:layout_height="wrap_content"
+                    android:layout_width="81dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/highlight"
+                    android:textSize="11sp"
+                    android:drawableTop="@drawable/ic_menu_heart"
+                    android:text="@string/menu_store" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:text="@string/title_comment"
+            android:textColor="@color/title"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/edt_order_note_text"
+            android:background="@drawable/edittext_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:minLines="5"
+            android:gravity="top"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:hint="留下評論讓大家參考吧！"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:listitem="@layout/adapter_comment" />
+
+</LinearLayout>
+
+</ScrollView>

@@ -4,16 +4,22 @@ public class information {
     private String username;
     private String email;
     private String password;
+    private String friend_request;
 
     public information(){
 
     }
 
-    public information(String username, String email, String password) {
+    public information(String username, String email, String password, String friend_request) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.friend_request = friend_request;
     }
+
+    public String getFriend_request() { return friend_request; }
+
+    public void setFriend_request(String friend_request) { this.friend_request = friend_request; }
 
     public String getUsername() {
         return username;
