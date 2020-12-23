@@ -35,6 +35,7 @@ public class LoginFragment extends Fragment {
     private EditText userEmailET, userPwdEt;
     private Button logInBtn;
     private ProgressBar objectProgressBar;
+    private Button buttonReg;
 
 
     public LoginFragment() {
@@ -51,11 +52,20 @@ public class LoginFragment extends Fragment {
 
             logInBtn = objectLoginFragment.findViewById(R.id.btn_login);
             objectProgressBar = objectLoginFragment.findViewById(R.id.progressbar_login);
+            buttonReg = objectLoginFragment.findViewById(R.id.btn_register);
 
             logInBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     LogInUser();
+                }
+            });
+
+            buttonReg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavController navController = Navigation.findNavController(v);
+                    navController.navigate(R.id.action_loginFragment_to_termsFragment);
                 }
             });
 
@@ -86,13 +96,13 @@ public class LoginFragment extends Fragment {
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
-                                    Intent intent = new Intent(requireActivity().getApplicationContext(), testActivity.class);
-                                    startActivity(intent);
                                     //startActivity(new Intent(getActivity().getApplicationContext(), PersonalFragment.class));
+                                    NavController navController = Navigation.findNavController(requireView());
+                                    navController.navigate(R.id.action_loginFragment_to_personalFragment);
                                     objectProgressBar.setVisibility(View.INVISIBLE);
                                     logInBtn.setEnabled(true);
 
-                                    getActivity().finish();
+                                    //getActivity().finish();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
@@ -129,17 +139,5 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //Button buttonlogin = requireActivity().findViewById(R.id.btn_login);
-        Button buttonreg = requireActivity().findViewById(R.id.btn_register);
-/*
-        buttonlogin.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_loginFragment_to_profileFragment);
-        });
-*/
-        buttonreg.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_loginFragment_to_termsFragment);
-        });
     }
 }

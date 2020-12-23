@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,6 +48,13 @@ public class ProfileFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
+    private void cur_name(){
+        TextView textView = requireActivity().findViewById(R.id.textView);
+        //String curname = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+        String curname = FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
+        textView.setText(curname);
+    }
+/*
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -62,6 +70,13 @@ public class ProfileFragment extends Fragment {
         EditText request = requireActivity().findViewById(R.id.editTextTextPersonName4);
 
         // button test on accept friend request
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cur_name();
+            }
+        });
+
         check.setOnClickListener(v -> {
             String now = find.getEditableText().toString();
             String from = request.getEditableText().toString();
@@ -137,4 +152,6 @@ public class ProfileFragment extends Fragment {
             });
         });
     }
+
+ */
 }

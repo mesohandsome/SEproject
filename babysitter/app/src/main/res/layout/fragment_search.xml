@@ -24,7 +24,7 @@
                     android:background="@color/white">
 
                         <Button
-                            android:id="@+id/btn_settings"
+                            android:id="@+id/btn_store"
                             android:layout_height="wrap_content"
                             android:layout_width="81dp"
                             android:layout_weight="1"
@@ -44,7 +44,7 @@
                             android:text="@string/lab_time" />
 
                         <Button
-                            android:id="@+id/btn_data"
+                            android:id="@+id/btn_setting"
                             android:layout_height="wrap_content"
                             android:layout_width="81dp"
                             android:layout_weight="1"

@@ -333,7 +333,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_save_data"
+                android:id="@+id/babysitter_save_data"
                 android:layout_height="wrap_content"
                 android:layout_width="64dp"
                 android:layout_marginRight="20dp"
@@ -342,7 +342,7 @@
                 android:text="@string/lab_save" />
 
             <Button
-                android:id="@+id/btn_cancel_data"
+                android:id="@+id/babysitter_cancel_data"
                 android:layout_height="wrap_content"
                 android:layout_width="64dp"
                 android:layout_marginLeft="20dp"

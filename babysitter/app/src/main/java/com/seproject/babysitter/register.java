@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,17 +24,21 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class register extends Fragment {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
     View objectRegisterFragment;
     private EditText userEmailET, userPwdET;
     private FirebaseAuth objectFirebaseAuth;
     private Button objectButton;
     private ProgressBar objectProgressBar;
+    private EditText realName, connect, place, usrID;
+    private DocumentReference myDocRef;
 
     public register() {
         // Required empty public constructor
@@ -47,7 +52,34 @@ public class register extends Fragment {
             {
                 objectProgressBar.setVisibility(View.VISIBLE);
                 objectButton.setEnabled(false);
-                objectFirebaseAuth.createUserWithEmailAndPassword(userEmailET.getText().toString(), userPwdET.getText().toString())
+                String ID = usrID.getText().toString().trim();
+                String passwd = userPwdET.getText().toString().trim();
+                String email = userEmailET.getText().toString().trim();
+                String name = realName.getText().toString().trim();
+                String phone = connect.getText().toString().trim();
+                String address = place.getText().toString().trim();
+                Map<String, Object> dataToSave = new HashMap<String, Object>();
+                dataToSave.put("ID", ID);
+                dataToSave.put("passwd", passwd);
+                dataToSave.put("email", email);
+                dataToSave.put("name", name);
+                dataToSave.put("phone", phone);
+                dataToSave.put("address", address);
+                String path = "users/" + name;
+                String TAG = "Saving Data";
+                myDocRef = FirebaseFirestore.getInstance().document(path);
+                myDocRef.set(dataToSave).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Saved!");
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d(TAG, "Failed!");
+                    }
+                });
+                objectFirebaseAuth.createUserWithEmailAndPassword(email, passwd)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
@@ -56,13 +88,19 @@ public class register extends Fragment {
                                 objectButton.setEnabled(true);
                                 userEmailET.setText("");
                                 userPwdET.setText("");
+                                realName.setText("");
+                                connect.setText("");
+                                place.setText("");
+                                usrID.setText("");
                                 if(objectFirebaseAuth.getCurrentUser() != null)
                                 {
                                     objectFirebaseAuth.signOut();
                                 }
+                                NavController navController = Navigation.findNavController(requireView());
+                                navController.navigate(R.id.action_register_to_loginFragment);
                             }
                         })
-                        .addOnFailureListener(new OnFailureistener() {
+                        .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 objectProgressBar.setVisibility(View.INVISIBLE);
@@ -133,6 +171,10 @@ public class register extends Fragment {
         {
             userEmailET = objectRegisterFragment.findViewById(R.id.et_email);
             userPwdET = objectRegisterFragment.findViewById(R.id.et_password);
+            realName = objectRegisterFragment.findViewById(R.id.et_real_name);
+            connect = objectRegisterFragment.findViewById(R.id.et_connect);
+            place = objectRegisterFragment.findViewById(R.id.et_place);
+            usrID = objectRegisterFragment.findViewById(R.id.et_name);
 
             objectFirebaseAuth = FirebaseAuth.getInstance();
             objectButton = objectRegisterFragment.findViewById(R.id.btn_register);
@@ -178,14 +220,6 @@ public class register extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        /*
-        Button buttonreg = requireActivity().findViewById(R.id.btn_register);
 
-        buttonreg.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_register_to_loginFragment);
-        });
-
-         */
     }
 }
