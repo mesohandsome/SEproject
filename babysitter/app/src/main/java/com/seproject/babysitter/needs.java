@@ -1,5 +1,8 @@
 package com.seproject.babysitter;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class needs extends Fragment {
@@ -31,6 +35,30 @@ public class needs extends Fragment {
             save_need = needsView.findViewById(R.id.btn_save_need);
             upload = needsView.findViewById(R.id.btn_upload);
             cancel = needsView.findViewById(R.id.btn_cancel);
+            ImageButton btnsearch = needsView.findViewById(R.id.needs_search);
+            ImageButton btnpersonal = needsView.findViewById(R.id.needs_personal);
+            ImageButton btnneeds = needsView.findViewById(R.id.needs_needs);
+
+            btnneeds.setEnabled(false);
+            btnneeds.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.gray3)));
+
+            btnsearch.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavController navController = Navigation.findNavController(v);
+                    navController.navigate(R.id.action_needs_to_search);
+                }
+            });
+
+            btnpersonal.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavController navController = Navigation.findNavController(v);
+                    navController.navigate(R.id.action_needs_to_personalFragment);
+                }
+            });
+
+            // TODO spinnners
 
             save_need.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -43,7 +71,7 @@ public class needs extends Fragment {
             upload.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    // TODO upload
                 }
             });
 

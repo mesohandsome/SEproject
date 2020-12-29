@@ -1,35 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scrollbarStyle="insideOverlay"
-    android:padding="5dp"
-    android:scrollbars="vertical"
-    android:background="@color/background">
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
-    android:paddingTop="10dp"
-    android:background="@color/background">
+    android:padding="5dp"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical">
 
-    <ImageButton
-        android:id="@+id/search_baby"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/btn_find_baby" />
-    <ImageButton
-        android:id="@+id/search_babysitter"
+        android:layout_height="627dp"
+        android:background="@color/background"
+        android:padding="5dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <ImageButton
+                android:id="@+id/search_baby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_find_baby" />
+
+            <ImageButton
+                android:id="@+id/search_babysitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_find_babysitter" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/btn_find_babysitter" />
+        android:layout_height="61dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/searchwhich_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_search" />
+
+        <ImageButton
+            android:id="@+id/searchwhich_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_person" />
+
+        <ImageButton
+            android:id="@+id/searchwhich_needs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_need" />
+    </LinearLayout>
 
 
 </LinearLayout>
-
-</ScrollView>

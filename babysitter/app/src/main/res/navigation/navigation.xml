@@ -49,6 +49,12 @@
         <action
             android:id="@+id/action_search_to_personalFragment"
             app:destination="@id/personalFragment" />
+        <action
+            android:id="@+id/action_search_to_search_whichFragment"
+            app:destination="@id/search_whichFragment" />
+        <action
+            android:id="@+id/action_search_to_searchBabyFragment"
+            app:destination="@id/searchBabyFragment" />
     </fragment>
     <fragment
         android:id="@+id/needs"
@@ -58,6 +64,9 @@
         <action
             android:id="@+id/action_needs_to_personalFragment"
             app:destination="@id/personalFragment" />
+        <action
+            android:id="@+id/action_needs_to_search"
+            app:destination="@id/search" />
     </fragment>
     <fragment
         android:id="@+id/termsFragment"
@@ -82,38 +91,18 @@
             app:destination="@id/termsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/personalFragment"
-        android:name="com.seproject.babysitter.PersonalFragment"
-        android:label="PersonalFragment" >
-        <action
-            android:id="@+id/action_personalFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
-            android:id="@+id/action_personalFragment_to_search_whichFragment"
-            app:destination="@id/search_whichFragment" />
-        <action
-            android:id="@+id/action_personalFragment_to_search"
-            app:destination="@id/search" />
-        <action
-            android:id="@+id/action_personalFragment_to_storeFragment"
-            app:destination="@id/storeFragment" />
-        <action
-            android:id="@+id/action_personalFragment_to_noticeFragment"
-            app:destination="@id/noticeFragment" />
-        <action
-            android:id="@+id/action_personalFragment_to_babysitterFragment"
-            app:destination="@id/babysitterFragment" />
-        <action
-            android:id="@+id/action_personalFragment_to_mybabyFragment"
-            app:destination="@id/mybabyFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/search_whichFragment"
         android:name="com.seproject.babysitter.Search_whichFragment"
         android:label="Search_whichFragment" >
         <action
             android:id="@+id/action_search_whichFragment_to_needs"
             app:destination="@id/needs" />
+        <action
+            android:id="@+id/action_search_whichFragment_to_personalFragment"
+            app:destination="@id/personalFragment" />
+        <action
+            android:id="@+id/action_search_whichFragment_to_search"
+            app:destination="@id/search" />
     </fragment>
     <fragment
         android:id="@+id/babysitterFragment"
@@ -142,7 +131,11 @@
     <fragment
         android:id="@+id/other_OneFragment"
         android:name="com.seproject.babysitter.Other_OneFragment"
-        android:label="Other_OneFragment" />
+        android:label="Other_OneFragment" >
+        <action
+            android:id="@+id/action_other_OneFragment_to_personalFragment"
+            app:destination="@id/personalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.seproject.babysitter.SettingsFragment"
@@ -157,6 +150,49 @@
         android:label="StoreFragment" >
         <action
             android:id="@+id/action_storeFragment_to_personalFragment"
+            app:destination="@id/personalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.seproject.babysitter.PersonalFragment"
+        android:label="PersonalFragment" >
+        <action
+            android:id="@+id/action_personalFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_personalFragment_to_search_whichFragment"
+            app:destination="@id/search_whichFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_mybabyFragment"
+            app:destination="@id/mybabyFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_babysitterFragment"
+            app:destination="@id/babysitterFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBabyFragment"
+        android:name="com.seproject.babysitter.searchBabyFragment"
+        android:label="searchBabyFragment" >
+        <action
+            android:id="@+id/action_searchBabyFragment_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_searchBabyFragment_to_other_OneFragment"
+            app:destination="@id/other_OneFragment" />
+        <action
+            android:id="@+id/action_searchBabyFragment_to_search_whichFragment"
+            app:destination="@id/search_whichFragment" />
+        <action
+            android:id="@+id/action_searchBabyFragment_to_personalFragment"
             app:destination="@id/personalFragment" />
     </fragment>
 </navigation>

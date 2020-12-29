@@ -21,7 +21,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="96dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -47,40 +47,41 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tv_name"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/send_tv_name"
                             android:layout_width="wrap_content"
-                            android:textSize="16dp"
+                            android:layout_height="wrap_content"
                             android:text="小明"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp" />
 
                         <TextView
-                            android:layout_height="wrap_content"
+                            android:id="@+id/stext_1"
                             android:layout_width="wrap_content"
-                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
                             android:text="向您發送了"
-                            android:textColor="@color/title" />
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
 
                         <!-- 聯絡資訊 title_chat /詳細地址 title_house -->
                         <TextView
-                            android:id="@+id/tv_info"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/stext2"
                             android:layout_width="wrap_content"
-                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
                             android:text="@string/title_chat"
-                            android:textColor="@color/highlight" />
-
-                        <TextView
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:textSize="16sp"
-                            android:text="查看請求"
-                            android:textColor="@color/title" />
+                            android:textColor="@color/highlight"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                 </FrameLayout>
 
+                <TextView
+                    android:id="@+id/stext3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看請求"
+                    android:textColor="@color/title"
+                    android:textSize="16dp" />
 
 
                 <FrameLayout
@@ -98,10 +99,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_weight="1"
-                            android:textSize="12sp"
-                            android:textColor="@color/white"
                             android:backgroundTint="@color/highlight"
-                            android:text="@string/lab_send" />
+                            android:text="@string/lab_send"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
 
                         <Button
                             android:id="@+id/btn_save_need"
@@ -109,11 +110,11 @@
                             android:layout_height="40dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
-                            android:textSize="12sp"
+                            android:layout_marginEnd="20dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/title"
                             android:text="@string/lab_refuse"
-                            android:layout_marginEnd="20dp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -123,7 +124,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/iv_image"
+                android:id="@+id/send_iv_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="8dp"
@@ -131,8 +132,6 @@
                 android:src="@mipmap/ic_launcher" />
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

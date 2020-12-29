@@ -19,12 +19,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private NavController navController;
@@ -34,21 +39,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        navController = Navigation.findNavController(findViewById(R.id.fragment));
-        NavigationUI.setupActionBarWithNavController(this, navController);
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        navController.navigateUp();
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        navController.navigateUp();
-        return super.onSupportNavigateUp();
+        //navController = Navigation.findNavController(findViewById(R.id.fragment));
+        //NavigationUI.setupActionBarWithNavController(this, navController);
     }
 
 }

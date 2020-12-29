@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -96,7 +98,7 @@ public class LoginFragment extends Fragment {
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
-                                    //startActivity(new Intent(getActivity().getApplicationContext(), PersonalFragment.class));
+                                    //startActivity(new Intent(getActivity().getApplicationContext(), layoutActivity.class));
                                     NavController navController = Navigation.findNavController(requireView());
                                     navController.navigate(R.id.action_loginFragment_to_personalFragment);
                                     objectProgressBar.setVisibility(View.INVISIBLE);
@@ -140,4 +142,5 @@ public class LoginFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
+
 }

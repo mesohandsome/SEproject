@@ -92,6 +92,10 @@ public class register extends Fragment {
                                 connect.setText("");
                                 place.setText("");
                                 usrID.setText("");
+                                String uid = objectFirebaseAuth.getCurrentUser().getUid().toString();
+                                String text = "this " + uid;
+                                String TAG = "register";
+                                Log.d(TAG, text);
                                 if(objectFirebaseAuth.getCurrentUser() != null)
                                 {
                                     objectFirebaseAuth.signOut();

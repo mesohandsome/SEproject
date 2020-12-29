@@ -47,7 +47,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tv_name"
+                            android:id="@+id/notice_tv_name"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:textSize="16dp"
@@ -55,15 +55,16 @@
                             android:textColor="@color/colorPrimary" />
 
                         <TextView
-                            android:layout_height="wrap_content"
+                            android:id="@+id/notice_1"
                             android:layout_width="wrap_content"
-                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
                             android:text="向您傳送了"
-                            android:textColor="@color/title" />
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
 
                         <!-- 聯絡資訊 / 詳細地址 / 寶寶簡介 / 保母簡介-->
                         <TextView
-                            android:id="@+id/tv_info"
+                            android:id="@+id/notice_2"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:textSize="16sp"
@@ -77,11 +78,12 @@
                 </FrameLayout>
 
                 <TextView
-                    android:layout_height="wrap_content"
+                    android:id="@+id/notice_3"
                     android:layout_width="wrap_content"
-                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
                     android:text="是否要查看資訊？"
-                    android:textColor="@color/title" />
+                    android:textColor="@color/title"
+                    android:textSize="16dp" />
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -124,7 +126,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/iv_image"
+                android:id="@+id/notice_iv_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="8dp"

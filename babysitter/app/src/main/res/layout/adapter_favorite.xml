@@ -36,13 +36,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/search_iv_avatar"
+                    android:id="@+id/favor_iv_avatar"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:id="@+id/search_tv_user_name"
+                    android:id="@+id/favor_tv_user_name"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_gravity="end|center_vertical"
@@ -52,7 +52,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/search_tv_date"
+                android:id="@+id/favor_tv_date"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_gravity="end|center_vertical"
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/search_tv_title_time"
+                        android:id="@+id/favor_tv_title_time"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:ellipsize="end"
@@ -86,7 +86,7 @@
                         android:textColor="@color/colorPrimaryDark"
                         tools:text="@string/title_time" />
                     <TextView
-                        android:id="@+id/search_tv_time"
+                        android:id="@+id/favor_tv_time"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="36dp"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/search_tv_title_place"
+                        android:id="@+id/favor_tv_title_place"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:ellipsize="end"
@@ -111,7 +111,7 @@
                         android:textColor="@color/colorPrimaryDark"
                         tools:text="@string/title_place" />
                     <TextView
-                        android:id="@+id/search_tv_place"
+                        android:id="@+id/favor_tv_place"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="36dp"
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/search_tv_title_money"
+                        android:id="@+id/favor_tv_title_money"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:ellipsize="end"
@@ -137,7 +137,7 @@
                         tools:text="@string/title_money" />
 
                     <TextView
-                        android:id="@+id/search_tv_money"
+                        android:id="@+id/favor_tv_money"
                         android:layout_width="65dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="36dp"
@@ -152,24 +152,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/search_tv_title_else"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:ellipsize="end"
-                    android:gravity="start|center_vertical"
-                    android:singleLine="true"
-                    android:textColor="@color/colorPrimaryDark"
-                    tools:text="@string/title_else" />
-                <TextView
-                    android:id="@+id/search_tv_else"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="36dp"
-                    android:singleLine="true"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14dp"
-                    tools:text="@string/app_slogan" />
+                    <TextView
+                        android:id="@+id/favor_tv_title_else"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start|center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        tools:text="@string/title_else" />
+                    <TextView
+                        android:id="@+id/favor_tv_else"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14dp"
+                        tools:text="@string/app_slogan" />
 
                 </FrameLayout>
 
@@ -177,7 +177,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/search_iv_image"
+                android:id="@+id/favor_iv_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="8dp"
@@ -197,27 +197,15 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/search_btn_store"
+                    android:id="@+id/favor_btn_del"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:drawableLeft="@drawable/ic_menu_heart"
-                    android:textColor="@color/highlight"
                     android:backgroundTint="@color/white"
-                    android:text="@string/menu_store" />
-
-                <Button
-                    android:id="@+id/searchbabysitter_btn_connect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/title"
-                    android:text="個人資料"
+                    android:drawableLeft="@drawable/ic_menu_heart"
+                    android:text="移除"
+                    android:textColor="@color/highlight"
                     android:textSize="12sp" />
 
             </LinearLayout>

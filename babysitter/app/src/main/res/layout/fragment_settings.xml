@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarStyle="insideOverlay"
@@ -8,12 +9,16 @@
     android:scrollbars="vertical"
     android:background="@color/background">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
 
         <TextView
             android:layout_height="wrap_content"
@@ -67,70 +72,70 @@
                 android:textColor="@color/title"
                 android:textSize="20sp" />
 
-                <FrameLayout
-                    android:id="@+id/fl_old_password"
+            <FrameLayout
+                android:id="@+id/fl_old_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_password" />
+
+                <EditText
+                    android:id="@+id/et_old_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_old_password"
+                    android:inputType="textPassword" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start|center_vertical"
-                        app:srcCompat="@drawable/ic_password" />
+            </FrameLayout>
 
-                    <EditText
-                        android:id="@+id/et_old_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="36dp"
-                        android:hint="@string/hint_please_input_old_password"
-                        android:inputType="textPassword" />
+            <FrameLayout
+                android:id="@+id/fl_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
 
-                </FrameLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_password" />
 
-                <FrameLayout
-                    android:id="@+id/fl_password"
+                <EditText
+                    android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_input_new_password"
+                    android:inputType="textPassword" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start|center_vertical"
-                        app:srcCompat="@drawable/ic_password" />
+            </FrameLayout>
 
-                    <EditText
-                        android:id="@+id/et_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="36dp"
-                        android:hint="@string/hint_please_input_new_password"
-                        android:inputType="textPassword" />
+            <FrameLayout
+                android:id="@+id/fl_check_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
 
-                </FrameLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_password" />
 
-                <FrameLayout
-                    android:id="@+id/fl_check_password"
+                <EditText
+                    android:id="@+id/et_check_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start|center_vertical"
-                        app:srcCompat="@drawable/ic_password" />
-
-                    <EditText
-                        android:id="@+id/et_check_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="36dp"
-                        android:hint="@string/hint_please_check_password"
-                        android:inputType="textPassword" />
-                </FrameLayout>
+                    android:layout_marginLeft="36dp"
+                    android:hint="@string/hint_please_check_password"
+                    android:inputType="textPassword" />
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
