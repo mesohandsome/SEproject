@@ -167,5 +167,22 @@ iCC托育媒合有權於任何時間修改或變更本服務條款之內容，�
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!--need spinner array  -->
+    <string-array name="FIND">
+        <item>寶寶</item>
+        <item>保母</item>
+    </string-array>
+    <string-array name="TIME">
+        <item>彈性</item>
+        <item>非彈性</item>
+    </string-array>
+    <string-array name="PLACE">
+        <item>寶寶家</item>
+        <item>保母家</item>
+    </string-array>
+    <string-array name="MONEY">
+        <item>請在下訪填入時薪</item>
+    </string-array>
+
 
 </resources>

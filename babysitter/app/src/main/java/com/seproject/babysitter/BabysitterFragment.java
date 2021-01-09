@@ -3,7 +3,6 @@ package com.seproject.babysitter;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,7 +13,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +23,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -198,34 +194,37 @@ public class BabysitterFragment extends Fragment {
             String path = "babysitter/" + uid;
             myDocRef = FirebaseFirestore.getInstance().document(path);
             myDocRef.get().addOnCompleteListener((task -> {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot d = task.getResult();
-                    String name = d.getString("name");
-                    babysitter_name.append(name);
-                    String age = d.getString("age");
-                    babysitter_age.append(age);
-                    String environment = d.getString("environment");
-                    babysitter_environment.append(environment);
-                    String experience = d.getString("experience");
-                    babysitter_experience.append(experience);
-                    String notice = d.getString("notice");
-                    babysitter_notice.append(notice);
-                    String number = d.getString("number");
-                    babysitter_number.append(number);
-                    String sexual = d.getString("sexual");
-                    babysitter_sexual.append(sexual);
-                    String salary = d.getString("salary");
-                    babysitter_money.append(salary);
-                    String time = d.getString("time");
-                    babysitter_time.append(time);
+                if (task.isSuccessful()){
+                    DocumentSnapshot d=task.getResult();
+                    if(d.exists()) {
+                        String name = d.getString("name");
+                        babysitter_name.append(name);
+                        String age = d.getString("age");
+                        babysitter_age.append(age);
+                        String environment = d.getString("environment");
+                        babysitter_environment.append(environment);
+                        String experience = d.getString("experience");
+                        babysitter_experience.append(experience);
+                        String notice = d.getString("notice");
+                        babysitter_notice.append(notice);
+                        String number = d.getString("number");
+                        babysitter_number.append(number);
+                        String sexual = d.getString("sexual");
+                        babysitter_sexual.append(sexual);
+                        String salary = d.getString("salary");
+                        babysitter_money.append(salary);
+                        String time = d.getString("time");
+                        babysitter_time.append(time);
+                    }
 
                 }
             }));
             downloadPic();
         }
         catch (Exception e){
-            Toast.makeText(getContext(), "updata info error", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
     }
 
     private void setUpload_pic()
@@ -266,7 +265,7 @@ public class BabysitterFragment extends Fragment {
         babysitter_time = babysitterFragmentView.findViewById(R.id.edt_time);
         babysitter_environment = babysitterFragmentView.findViewById(R.id.edt_environment);
         babysitter_experience = babysitterFragmentView.findViewById(R.id.edt_experience);
-        babysitter_notice = babysitterFragmentView.findViewById(R.id.edt_else);
+        babysitter_notice = babysitterFragmentView.findViewById(R.id.edt_salary);
         babysitter_money = babysitterFragmentView.findViewById(R.id.edt_money);
         babysitter_number = babysitterFragmentView.findViewById(R.id.edt_number);
         FirebaseAuth = FirebaseAuth.getInstance();

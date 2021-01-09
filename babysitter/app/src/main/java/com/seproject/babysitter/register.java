@@ -1,5 +1,6 @@
 package com.seproject.babysitter;
 
+import android.nfc.Tag;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -65,7 +66,7 @@ public class register extends Fragment {
                 dataToSave.put("name", name);
                 dataToSave.put("phone", phone);
                 dataToSave.put("address", address);
-                String path = "users/" + name;
+                String path = "users/" + email;
                 String TAG = "Saving Data";
                 myDocRef = FirebaseFirestore.getInstance().document(path);
                 myDocRef.set(dataToSave).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -84,14 +85,15 @@ public class register extends Fragment {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(getContext(), "帳戶建立成功!", Toast.LENGTH_SHORT).show();
-                                objectProgressBar.setVisibility(View.INVISIBLE);
+
+                                /*objectProgressBar.setVisibility(View.INVISIBLE);
                                 objectButton.setEnabled(true);
                                 userEmailET.setText("");
                                 userPwdET.setText("");
                                 realName.setText("");
                                 connect.setText("");
                                 place.setText("");
-                                usrID.setText("");
+                                usrID.setText("");*/
                                 String uid = objectFirebaseAuth.getCurrentUser().getUid().toString();
                                 String text = "this " + uid;
                                 String TAG = "register";

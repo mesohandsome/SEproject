@@ -1,56 +1,30 @@
 package com.seproject.babysitter;
 
 public class babysitter {
-    private String UID, age, environment, experience, name;
-    private String notice, number, salary, sexual, time;
+    private String name;
+    private String place;
+    private String salary;
+    private String time;
+    private long money;
 
     public babysitter(){
 
     }
 
-    public babysitter(String UID, String age, String environment, String experience, String name, String notice, String number, String salary, String sexual, String time) {
-        this.UID = UID;
-        this.age = age;
-        this.environment = environment;
-        this.experience = experience;
+    public babysitter(String name, String place, String salary, String time, long money) {
         this.name = name;
-        this.notice = notice;
-        this.number = number;
+        this.place = place;
         this.salary = salary;
-        this.sexual = sexual;
         this.time = time;
+        this.money = money;
     }
 
-    public String getUID() {
-        return UID;
+    public long getMoney() {
+        return money;
     }
 
-    public void setUID(String UID) {
-        this.UID = UID;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getEnvironment() {
-        return environment;
-    }
-
-    public void setEnvironment(String environment) {
-        this.environment = environment;
-    }
-
-    public String getExperience() {
-        return experience;
-    }
-
-    public void setExperience(String experience) {
-        this.experience = experience;
+    public void setMoney(long money) {
+        this.money = money;
     }
 
     public String getName() {
@@ -61,20 +35,12 @@ public class babysitter {
         this.name = name;
     }
 
-    public String getNotice() {
-        return notice;
+    public String getPlace() {
+        return place;
     }
 
-    public void setNotice(String notice) {
-        this.notice = notice;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
     public String getSalary() {
@@ -83,14 +49,6 @@ public class babysitter {
 
     public void setSalary(String salary) {
         this.salary = salary;
-    }
-
-    public String getSexual() {
-        return sexual;
-    }
-
-    public void setSexual(String sexual) {
-        this.sexual = sexual;
     }
 
     public String getTime() {

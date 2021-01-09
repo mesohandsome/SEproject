@@ -24,16 +24,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class personalAdapter extends FirestoreRecyclerAdapter<information, personalAdapter.personalViewHolder> {
+public class personalAdapter extends FirestoreRecyclerAdapter<personal, personalAdapter.personalViewHolder> {
 
-    public personalAdapter(@NonNull FirestoreRecyclerOptions<information> options) {
+    public personalAdapter(@NonNull FirestoreRecyclerOptions<personal> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull personalViewHolder personalViewHolder, int i, @NonNull information information) {
-        personalViewHolder.username.setText(information.getUsername());
-        personalViewHolder.comment.setText(information.getComment());
+    protected void onBindViewHolder(@NonNull personalViewHolder personalViewHolder, int i, @NonNull personal personal) {
+        personalViewHolder.username.setText(personal.getName());
+        personalViewHolder.comment.setText(personal.getComment());
 
         // FirebaseAuth.getInstance().getCurrentUser().getUid();
         // use uid to find name

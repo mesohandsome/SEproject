@@ -11,6 +11,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/needs_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_search" />
+
+        <ImageButton
+            android:id="@+id/needs_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_person" />
+
+        <ImageButton
+            android:id="@+id/needs_needs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_need" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="20dp">
 
@@ -194,7 +221,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/edt_else"
+                android:id="@+id/edt_salary"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:layout_marginStart="100dp"
@@ -213,7 +240,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="147dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
@@ -255,33 +282,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/needs_search"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_search" />
-
-        <ImageButton
-            android:id="@+id/needs_personal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_person" />
-
-        <ImageButton
-            android:id="@+id/needs_needs"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_need" />
     </LinearLayout>
 
 

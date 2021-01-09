@@ -4,14 +4,17 @@ public class baby {
     private String address, character, diet, gender;
     private String loction, phone, pickup, ps;
     private String salary, time;
-    private String old;
+    private String old, name, place;
+    private long money;
 
     public baby(){
 
     }
 
-    public baby(String address, String character, String diet, String gender, String loction, String old, String phone, String pickup, String ps, String salary, String time) {
+    public baby(String place, String name, long money, String address, String character, String diet, String gender, String loction, String old, String phone, String pickup, String ps, String salary, String time) {
+        this.place = place;
         this.address = address;
+        this.name = name;
         this.character = character;
         this.diet = diet;
         this.gender = gender;
@@ -22,6 +25,31 @@ public class baby {
         this.ps = ps;
         this.salary = salary;
         this.time = time;
+        this.money = money;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace() {
+        this.place = place;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getMoney() {
+        return money;
+    }
+
+    public void setMoney(long money) {
+        this.money = money;
     }
 
     public String getAddress() {

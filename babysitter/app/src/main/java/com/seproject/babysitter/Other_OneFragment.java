@@ -53,7 +53,7 @@ public class Other_OneFragment extends Fragment {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if(documentSnapshot.exists()){
-                        name.set
+
                         name.setText(documentSnapshot.getString("other"));
                         ooo.setName(documentSnapshot.getString("other"));
                     }

@@ -33,10 +33,10 @@ public class searchbabysitterAdapter extends FirestoreRecyclerAdapter<babysitter
     @Override
     protected void onBindViewHolder(@NonNull searchViewHolder searchViewHolder, int i, @NonNull babysitter babysitter) {
         searchViewHolder.username.setText(babysitter.getName().toString());
-        searchViewHolder.place.setText(babysitter.getEnvironment().toString());
+        searchViewHolder.place.setText(babysitter.getPlace().toString());
         searchViewHolder.time.setText(babysitter.getTime().toString());
         searchViewHolder.salary.setText(babysitter.getSalary().toString());
-        searchViewHolder.elseneed.setText(babysitter.getExperience().toString());
+        //searchViewHolder.elseneed.setText(babysitter.getExperience().toString());
         searchViewHolder.title_salary.setText("薪資");
         searchViewHolder.title_place.setText("地點");
         searchViewHolder.title_time.setText("時間");
@@ -75,6 +75,7 @@ public class searchbabysitterAdapter extends FirestoreRecyclerAdapter<babysitter
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_result, parent, false);
         return new searchViewHolder(view);
     }
+
 
     class searchViewHolder extends RecyclerView.ViewHolder{
         TextView username, date, time, place, salary, elseneed;

@@ -304,7 +304,7 @@
 
 
                 <EditText
-                    android:id="@+id/edt_else"
+                    android:id="@+id/edt_salary"
                     android:background="@drawable/edittext_back"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

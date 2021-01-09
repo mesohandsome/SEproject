@@ -1,6 +1,11 @@
 package com.seproject.babysitter;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
@@ -28,15 +33,22 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.api.Distribution;
+import com.google.common.net.InternetDomainName;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Collection;
 
 public class PersonalFragment extends Fragment {
@@ -44,6 +56,15 @@ public class PersonalFragment extends Fragment {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private personalAdapter adapter;
     private View view;
+    private DocumentReference myDocRef;
+    private String id;
+    private StorageReference mStorageRef;
+    private Uri imageUrl;
+    private TextView name,email,realname;
+    private ImageView person_pic;
+    private FirebaseAuth FirebaseAuth;
+    private FirebaseStorage storage;
+    private String uid;
 
     public PersonalFragment() {
         // Required empty public constructor
@@ -152,10 +173,10 @@ public class PersonalFragment extends Fragment {
 
     private  void setRecyclerView() {
         try {
-            Query query = db.collection("recycler_testing");
+            Query query = db.collection("home_comment");
 
-            FirestoreRecyclerOptions<information> options = new FirestoreRecyclerOptions.Builder<information>()
-                    .setQuery(query, information.class)
+            FirestoreRecyclerOptions<personal> options = new FirestoreRecyclerOptions.Builder<personal>()
+                    .setQuery(query, personal.class)
                     .build();
 
             adapter = new personalAdapter(options);
@@ -169,12 +190,74 @@ public class PersonalFragment extends Fragment {
         }
     }
 
+    private void updateInfo()
+    {
+        name=view.findViewById(R.id.personal_tv_real_name);
+        email=view.findViewById(R.id.personal_tv_email);
+        downloadPic();
+        String email_tmp= FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        email.setText(email_tmp);
+        try {
+            String path = "users/" + email_tmp;
+            myDocRef = db.document(path);
+            myDocRef.get().addOnCompleteListener((task -> {
+                if (task.isSuccessful()){
+                    DocumentSnapshot d=task.getResult();
+                    if(d.exists()) {
+                        String name_tmp = d.getString("name");
+                        name.append(""+name_tmp);
 
+
+                    }
+
+                }
+            }));
+
+        }
+        catch (Exception e){
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    private void  downloadPic()
+    {
+        StorageReference imgRef=mStorageRef.child("images/"+uid+"_person");
+        try {
+            final File download_img=File.createTempFile("image","jpg");
+
+            imgRef.getFile(download_img)
+                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            // Successfully downloaded data to local file
+                            // ...
+                            Bitmap bitmap= BitmapFactory.decodeFile(download_img.getAbsolutePath());
+                            person_pic.setImageBitmap(bitmap);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle failed download
+                    // ...
+                }
+            });
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_personal, container, false);
+        storage= FirebaseStorage.getInstance();
+        mStorageRef = storage.getReference();
+        uid = FirebaseAuth.getInstance().getUid();
+        person_pic=view.findViewById(R.id.iv_image);
+        updateInfo();
         allClickListener();
         setRecyclerView();
         return view;
